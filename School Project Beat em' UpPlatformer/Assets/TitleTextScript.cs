@@ -25,4 +25,16 @@ public class TitleTextScript : MonoBehaviour {
     {
         gameObject.GetComponent<Image>().color = Color.white;
     }
+    public void NewGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
+    }
+    public void Options()
+    {
+        // Do nothing
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
