@@ -7,10 +7,14 @@ public class PlayerMovement : MonoBehaviour
 {
     private float xSpeed;
     private float ySpeed;
+    private Vector2 startLocation;
 
 
     private bool touchFloor;
+    private bool death;
     public int floorHash;
+    public int hazardHash;
+    public int doorHash;
     Task jumpTask;
 
 	// Use this for initialization
@@ -18,11 +22,17 @@ public class PlayerMovement : MonoBehaviour
     {
         xSpeed = 8f;
         ySpeed = 10f;
+        startLocation = transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+        if (death)
+        {
+            transform.position = startLocation;
+            death = false;
+        }
         float movementValueX = Input.GetAxis("Horizontal") * xSpeed;
         float movementValueY = 0;
 
@@ -43,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.GetHashCode() == floorHash)
             touchFloor = true;
+        if (collision.gameObject.GetHashCode() == hazardHash)
+            death = true;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -56,6 +68,15 @@ public class PlayerMovement : MonoBehaviour
                 // Jump Start Here
                 touchFloor = false;
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetHashCode() == doorHash)
+        {
+            // Load Scene
+            Debug.Log("Next Level!");
         }
     }
 }

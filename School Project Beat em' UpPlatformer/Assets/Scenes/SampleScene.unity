@@ -1032,6 +1032,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorHash: 0
+  hazardHash: 0
+  doorHash: 0
 --- !u!61 &1272923931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1149,6 +1151,7 @@ GameObject:
   - component: {fileID: 1737713758}
   - component: {fileID: 1737713757}
   - component: {fileID: 1737713756}
+  - component: {fileID: 1737713759}
   m_Layer: 0
   m_Name: Tilemap_HazardFloor
   m_TagString: Untagged
@@ -1387,6 +1390,17 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
+--- !u!114 &1737713759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1737713752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ebb712a9cbcfd4e9c6d101f772f0c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1855979463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,6 +1414,7 @@ GameObject:
   - component: {fileID: 1855979469}
   - component: {fileID: 1855979468}
   - component: {fileID: 1855979467}
+  - component: {fileID: 1855979470}
   m_Layer: 0
   m_Name: Tilemap_Door
   m_TagString: Untagged
@@ -1414,8 +1429,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1855979463}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.564, y: -0.064, z: 0}
+  m_LocalScale: {x: 0.744, y: 0.984, z: 1}
   m_Children: []
   m_Father: {fileID: 1103275022}
   m_RootOrder: 3
@@ -1585,7 +1600,7 @@ CompositeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1595,20 +1610,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1855979469}
     m_ColliderPaths:
-    - - X: 100000000
-        Y: -40000000
-      - X: 100000000
-        Y: -10000000
-      - X: 80000000
-        Y: -10000000
-      - X: 80000000
-        Y: -40000000
+    - - X: 74400000
+        Y: -39360000
+      - X: 74400000
+        Y: -9840000
+      - X: 59520000
+        Y: -9840000
+      - X: 59520000
+        Y: -39360000
   m_CompositePaths:
     m_Paths:
-    - - {x: 10, y: -1}
-      - {x: 8, y: -1}
-      - {x: 8, y: -4}
-      - {x: 10, y: -4}
+    - - {x: 7.44, y: -0.984}
+      - {x: 5.952, y: -0.984}
+      - {x: 5.952, y: -3.936}
+      - {x: 7.44, y: -3.936}
   m_VertexDistance: 0.0005
 --- !u!50 &1855979468
 Rigidbody2D:
@@ -1643,3 +1658,14 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
+--- !u!114 &1855979470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1855979463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c8be29dc51653f4198f1255b8332210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

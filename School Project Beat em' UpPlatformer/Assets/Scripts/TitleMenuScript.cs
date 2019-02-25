@@ -7,7 +7,6 @@ public class TitleMenuScript : MonoBehaviour
 {
     public Camera mainCamera;
     public Canvas canvas;
-    private List<GameObject> textList = new List<GameObject>();
 
 	// Use this for initialization
 	void Start ()
