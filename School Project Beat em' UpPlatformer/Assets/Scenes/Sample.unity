@@ -594,6 +594,7 @@ GameObject:
   - component: {fileID: 1090539761}
   - component: {fileID: 1090539760}
   - component: {fileID: 1090539759}
+  - component: {fileID: 1090539762}
   m_Layer: 0
   m_Name: Tilemap_Wall
   m_TagString: Untagged
@@ -957,6 +958,18 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
+--- !u!114 &1090539762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1090539755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b7600193d578c43a42d3f5576053c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stuck: 0
 --- !u!1 &1103275020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,9 +1044,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e16bb71520eec4b95648a3618fb8df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnPosition: {x: 0, y: 0}
+  startLocationObj: {fileID: 0}
+  death: 0
   floorHash: 0
   hazardHash: 0
   doorHash: 0
+  wallHash: 0
 --- !u!61 &1272923931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1138,6 +1155,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1471811423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1471811424}
+  m_Layer: 0
+  m_Name: StartPositionTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1471811424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1471811423}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.54, y: -2.94, z: -9.9027}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1737713752
 GameObject:
   m_ObjectHideFlags: 0

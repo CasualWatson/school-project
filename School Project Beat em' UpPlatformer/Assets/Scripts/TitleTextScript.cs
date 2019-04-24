@@ -27,7 +27,7 @@ public class TitleTextScript : MonoBehaviour {
     }
     public void NewGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("level1", UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
     public void Options()
     {
