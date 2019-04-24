@@ -645,7 +645,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: ee38744a-07e2-4f3d-b047-1a4a258d1993
   projectName: School Project Beat em' UpPlatformer
   organizationId: dr_watt
